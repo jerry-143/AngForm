@@ -1,0 +1,51 @@
+<!-- main app container -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h3>Project Code Module</h3>
+                <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate><br>
+                  
+                    <div class="form-group">
+                        <label for="projectDescription">Project Description</label>
+                        <input type="text" class="form-control" name="projectDescription" [(ngModel)]="model.projectDescription" #projectDescription="ngModel" [ngClass]="{ 'is-invalid': f.submitted && projectDescription.invalid }" required />
+                        <div *ngIf="f.submitted && projectDescription.invalid" class="invalid-feedback">
+                            <div *ngIf="projectDescription.errors.required">Project Description is required</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="psd">Project Start Date</label>
+                        <input type="text" class="form-control" name="psd" [(ngModel)]="model.psd" #psd="ngModel" [ngClass]="{ 'is-invalid': f.submitted && psd.invalid }" required />
+                        <div *ngIf="f.submitted && psd.invalid" class="invalid-feedback">
+                            <div *ngIf="psd.errors.required">Project Start Date is required</div>
+                        </div>
+                    </div>
+
+
+
+                                    <div class="form-group">
+                        <label for="ped">Project End Date</label>
+                        <input type="text" class="form-control" name="ped" [(ngModel)]="model.ped" #ped="ngModel" [ngClass]="{ 'is-invalid': f.submitted && ped.invalid }" required />
+                        <div *ngIf="f.submitted && ped.invalid" class="invalid-feedback">
+                            <div *ngIf="psd.errors.required">Project End Date is required</div>
+                        </div>
+                    </div>
+                    
+                    
+    
+                    
+                    <div class="form-group">
+                        <button class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- credits -->
+<div class="text-center">
+
+
+</div>
